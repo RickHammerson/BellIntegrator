@@ -1,0 +1,12 @@
+INSERT INTO Citizenship(CITIZENSHIP_CODE, CITIZENSHIP_NAME) values (1,'F');
+INSERT INTO Citizenship(CITIZENSHIP_CODE, CITIZENSHIP_NAME) values (5,'L');
+INSERT INTO Doc_Type(doc_code, doc_name) values (12,'fir');
+INSERT INTO Doc_Type(doc_code, doc_name) values (67,'rtt');
+INSERT INTO Organization(version, org_name, full_name, inn, kpp, address, phone, is_active) values (1,'org1','org1FullName','368699','348888','gdfert','+567443',true);
+INSERT INTO Organization(version, org_name, full_name, inn, kpp, address, phone, is_active) values (1,'org2','org2FullName','876878','231111','68ffyy','+222222',false);
+INSERT INTO Office(VERSION, OFFICE_NAME, ADDRESS, PHONE, IS_ACTIVE, ORG_ID) values (1,'officeName1','addressOffice1','+589908',true,1);
+INSERT INTO Office(VERSION, OFFICE_NAME, ADDRESS, PHONE, IS_ACTIVE, ORG_ID) values (1,'officeName1ForAnotherOrg','addressOffice1ForAnotherOrg','+989999',false,2);
+INSERT INTO User(version, first_name, second_name, middle_name, position_in_company, phone, is_identified, office_id, citizenship_id) VALUES (1,'eyer','eyer','eyer','ooooo','+464488',true,1,1);
+INSERT INTO User(version, first_name, second_name, middle_name, position_in_company, phone, is_identified, office_id, citizenship_id) VALUES (1,'iyuo','iyuo','iyuo','fffff','+86595',false,2,1);
+INSERT INTO Document(id, version, doc_number, doc_date, doc_type_id) values (1,1,'347575','2004-12-31',1);
+INSERT INTO Document(id, version, doc_number, doc_date, doc_type_id) values (2,1,'878708','2005-11-12',1);
