@@ -28,7 +28,7 @@ public class Office {
     private boolean isActive;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "org_id")
     private Organization organization;
 
     public Office() {

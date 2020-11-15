@@ -22,9 +22,6 @@ public class Document {
     @Temporal(TemporalType.DATE)
     private LocalDate documentDate;
 
-    @Column(name = "doc_type_id", nullable = false)
-    private Long documentTypeId;
-
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "document")
     @MapsId
     @JoinColumn(name = "id")
@@ -32,7 +29,7 @@ public class Document {
 
     @ManyToOne
     @JoinColumn(name = "id")
-    private Document document;
+    private DocumentType document;
 
     public Document() {
     }
@@ -69,14 +66,6 @@ public class Document {
         this.documentDate = documentDate;
     }
 
-    public Long getDocumentTypeId() {
-        return documentTypeId;
-    }
-
-    public void setDocumentTypeId(Long documentTypeId) {
-        this.documentTypeId = documentTypeId;
-    }
-
     public User getUser() {
         return user;
     }
@@ -85,11 +74,11 @@ public class Document {
         this.user = user;
     }
 
-    public Document getDocument() {
+    public DocumentType getDocument() {
         return document;
     }
 
-    public void setDocument(Document document) {
+    public void setDocument(DocumentType document) {
         this.document = document;
     }
 }
