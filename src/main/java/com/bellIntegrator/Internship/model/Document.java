@@ -24,7 +24,7 @@ public class Document {
 
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "document")
     @MapsId
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "id")
     private User user;
 
     @ManyToOne
