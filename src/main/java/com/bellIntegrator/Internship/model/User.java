@@ -43,7 +43,7 @@ public class User {
     private Citizenship citizenship;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="document_id",nullable = false)
+    @JoinColumn(name="document_id")
     private Document document;
 
     public User() {
