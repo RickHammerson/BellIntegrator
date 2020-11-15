@@ -42,8 +42,7 @@ public class User {
     @JoinColumn(name = "citizenship_id",nullable = false)
     private Citizenship citizenship;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="document_id")
+    @OneToOne(mappedBy = "user",fetch = FetchType.LAZY)
     private Document document;
 
     public User() {
