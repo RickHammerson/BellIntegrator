@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Office
   version INTEGER NOT NULL,
   office_name VARCHAR(30) not null,
   address VARCHAR(255) not null,
-  phone VARCHAR(255) not null,
+  phone VARCHAR(20) not null,
   is_active BOOLEAN not null,
   org_id INTEGER not null
 );
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS Doc_Type
 (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
   doc_code SMALLINT,
-  doc_name VARCHAR(255) not null,
+  doc_name VARCHAR(150) not null,
   UNIQUE KEY doc_code_UNIQUE (doc_code)
 );
 
