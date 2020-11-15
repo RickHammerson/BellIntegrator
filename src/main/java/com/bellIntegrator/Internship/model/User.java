@@ -34,19 +34,16 @@ public class User {
     @Column(name = "is_identified", nullable = false)
     private boolean isIdentified;
 
-    @Column(nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "office_id")
+    @JoinColumn(name = "office_id",nullable = false)
     private Office office;
 
-    @Column(nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "citizenship_id")
+    @JoinColumn(name = "citizenship_id",nullable = false)
     private Citizenship citizenship;
 
-    @Column(nullable = false)
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="document_id")
+    @JoinColumn(name="document_id",nullable = false)
     private Document document;
 
     public User() {
